@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <!-- fav -->
+<link rel="apple-touch-icon" sizes="60x60" href="favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0.16/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon_package_v0.16/favicon-16x16.png">
+<link rel="manifest" href="./favicon_package_v0.16/mstile-150x150.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- fav -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Drag And Drop API</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            height: 100vh;
+        }
+        .dropzone {
+            border: 2px solid rgb(146, 244, 129);
+            /* padding: 20px; */
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 100px;
+            background-color: rgb(4, 94, 97);
+        }
+        .dropzone .files{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .dropzone .files .bx{
+            color: #fff;
+            font-size: 5rem;
+        }
+        .dropzone .files .bx+span{
+            font-size: 1.4rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 700;
+            color: #fff;
+        }
+        .dropzone .name{
+            color: #fff;
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .dropzone .name,
+        .message{
+            display: none;
+            transition: all 1s linear;
+        }
+        .dropzone .name +.message{
+            font-size: 1.3rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(105, 245, 105);
+        }
+        img{
+            border-radius: 50%;
+            border: 2px solid green;
+            object-fit: cover;
+         width: 300px;
+         height: 300px;
+        }
+        .imagese{
+            display: none;
+        }
+        .clears{
+            padding: 10px;
+            font-size: 1.2rem;
+            background-color: rgb(7, 118, 81);
+            border-radius: 10px;
+            font-weight: 500;
+            border: 2px solid rgb(183, 183, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="dropzone">
+            <div class="files">
+                <i class='bx bx-upload'></i>
+                <span>Upload Here</span>
+            </div>
+            <p class="name"></p>
+            <p class="message">Sucessfully Upload Image.</p>
+            <h3>Drag and Drop Image</h3>
+        </div>
+        <div class="imagese">
+        <img src="" alt="" class="image">
+    </div>
+        <button class="clears">Clear SessionStorage limited space  5MB only.</button>
+
+        <h3>© Allright reserved by Developer Rahul arya</h3>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
